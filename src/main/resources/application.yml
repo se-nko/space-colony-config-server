@@ -1,0 +1,15 @@
+server:
+  port: ${PORT:9051}
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          # place here classpath to space-colony-configs project in your file system
+          uri: ${CONFIG_URL:/home/sergey/projects/space-colony/configs}
+          username: ${REPO_USER:quest}
+          password: ${REPO_PASS:pass}
+  security:
+    user:
+      name: ${SERVER_USER:pet}
+      password: ${SERVER_PASS:pass}
